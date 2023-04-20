@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Mode</title>
+</head>
+<style>
+    #toggle {
+    background-color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin: 50px auto;
+    cursor: pointer;
+}
+
+#circle {
+    width: 38px;
+    height: 38px;
+    background-color: black;
+    border-radius: 50%;
+    margin-top: 1px;
+    transition-duration: 1s;
+    margin-left: 1px;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.color-white {
+    color: white;
+}
+
+.bck-color-black {
+    background-color: black;
+}
+</style>
+<body>
+   
+   <div id="toggle">
+       <div id="circle" class="animate"></div>
+   </div>
+   
+   <h1>Click on the Toggle Button</h1>
+
+   <script>
+    var toggled = false;
+
+var hTag = document.getElementsByTagName("h1")[0];
+var bodyTag = document.getElementsByTagName("body")[0];
+var circle = document.getElementById("circle");
+
+document.getElementById("toggle").onclick = function () {
+        
+    if(!toggled) {
+        
+        hTag.classList.add("color-white");
+        bodyTag.classList.add("bck-color-black");
+        circle.style.marginLeft = "100px";
+        
+        toggled = true;a
+        
+    } else {
+        
+        hTag.classList.remove("color-white");
+        bodyTag.classList.remove("bck-color-black");
+        circle.style.marginLeft = "1px";
+        
+        toggled = false;
+        
+    }
+    
+}
+   </script>
+   
+</body>
+</html>
